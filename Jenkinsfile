@@ -46,11 +46,13 @@ pipeline {
                 sh '''  
                 ssh jenkins@172.31.28.25
                 docker pull nikhilnidhi/samplewebapp
-                docker run -d -p 8003:8080 nikhilnidhi/samplewebapp '''
+                docker run -d -p 8003:8080 nikhilnidhi/samplewebapp 
+                '''
 
                                "or"
 
-                sh "ssh jenkins@172.31.28.25 "docker run -d -p 8003:8080 nikhilnidhi/samplewebapp"
+                # sh "ssh jenkins@172.31.28.25 'docker pull nikhilnidhi/samplewebapp && docker run -d -p 8003:8080 nikhilnidhi/samplewebapp'"
+
 
 
                 
